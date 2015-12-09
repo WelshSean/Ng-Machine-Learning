@@ -16,7 +16,7 @@ for iter = 1:num_iters
     % Hint: While debugging, it can be useful to print out the values
     %       of the cost function (computeCost) and gradient here.
     %
-    computeCost(X, y, theta)
+    computeCost(X, y, theta);
 
     temp1 = 0;
     temp2 = 0;
