@@ -5,6 +5,7 @@ function J = computeCostMulti(X, y, theta)
 
 % Initialize some useful values
 m = length(y); % number of training examples
+n = size(X, 2); % number of features
 
 % You need to return the following variables correctly 
 J = 0;
@@ -13,8 +14,15 @@ J = 0;
 % Instructions: Compute the cost of a particular choice of theta
 %               You should set J to the cost.
 
+for i = 1:m
+    tempsum = 0;
+    for j = 1:n
+        tempsum = tempsum + (theta(j) * X(i,j));
+    end
+    J = J + (tempsum - y(i))^2;
+end
 
-
+J = J / (2*m);
 
 
 % =========================================================================
